@@ -34,7 +34,12 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a>
+                    	<a href="http://jmdobry.github.io/angular-cache/guide.html#basics" style="padding-top: 0px;padding-bottom: 0px; line-height: 0px; position: initial;;
+">
+                    	<span id="notification" class="numAdminCount" style="">1 <span class="glyphicon glyphicon-envelope"></span></span>
+                    	</a>
+                    </li>
                     <li><a href="{{ route('messages') }}">Messages @include('messenger.unread-count')</a></li>
                     <li><a href="{{ route('messages.create') }}">+New Message</a></li>
 				</ul>
@@ -111,3 +116,31 @@
     @endif
 </body>
 </html>
+<style type="text/css">
+.numAdminCount {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  min-width: 2.2em;
+  max-width: 2.5em;
+  padding: 0 3px;
+  color: #ffffff;
+  border: 2px solid #E50D0D;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #f9423a;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+</style>
